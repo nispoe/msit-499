@@ -50,7 +50,7 @@ print(response.total_balance)
 
 begin_ts = datetime.now()
 
-for i in range(0,10):
+for i in range(0,20):
     invoice = ln.Invoice(value=1)
     macaroon = create_macaroon(bob_macaroon_path)
     bobInvoice = stub_bob.AddInvoice(invoice)
