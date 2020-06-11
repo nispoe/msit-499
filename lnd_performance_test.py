@@ -49,7 +49,7 @@ plt.savefig('lnd.png')
 # plt.show()
 
 print(f"R-square = {model.score(x, y)}") # R^2
-print(f"slope = {model.coef_[0]}") # slope
-print(f"intercept = {model.intercept_}") # intercept
-print(f"For every second of increasement, the lnd can process roughly {round(20/model.coef_[0],0)} transactions")
+print(f"Slope = {model.coef_[0]}") # slope
+print(f"Intercept = {model.intercept_}") # intercept
+print(f"For every incrementing second, the lnd can process roughly {round(20/model.coef_[0],0)} transactions")
 
