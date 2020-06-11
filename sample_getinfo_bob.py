@@ -5,7 +5,7 @@ import os
 import codecs
 
 os.environ["GRPC_SSL_CIPHER_SUITES"] = 'HIGH+ECDSA'
-cert = open(os.path.expanduser('./.lnd/tls.cert'), 'rb').read()
+cert = open(os.path.expanduser('~/.lnd/tls.cert'), 'rb').read()
 #creds = grpc.ssl_channel_credentials(cert)
 #channel = grpc.secure_channel('localhost:10002', creds)
 #stub = lnrpc.LightningStub(channel)
@@ -29,5 +29,5 @@ response = stub.GetInfo(ln.GetInfoRequest())
 print(response)
 
 response = stub.WalletBalance(ln.WalletBalanceRequest())
-print(response.total_balance)
+print('Total Balance = ' + str(response.total_balance))
 

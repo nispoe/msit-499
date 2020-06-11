@@ -6,7 +6,7 @@ import os
 import codecs
 
 os.environ["GRPC_SSL_CIPHER_SUITES"] = 'HIGH+ECDSA'
-cert = open(os.path.expanduser('./.lnd/tls.cert'), 'rb').read()
+cert = open(os.path.expanduser('~/.lnd/tls.cert'), 'rb').read()
 
 
 def create_macaroon(macaroon_path):
